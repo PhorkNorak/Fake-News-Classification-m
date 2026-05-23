@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python -c \"import json; nb = json.load\\(open\\(r'd:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\Fake_News_Classification_Final.ipynb', encoding='utf-8'\\)\\); print\\('OK'\\); print\\('cells:', len\\(nb['cells']\\)\\); print\\('nbformat:', nb['nbformat']\\); print\\('code cells:', sum\\(1 for c in nb['cells'] if c['cell_type']=='code'\\)\\); print\\('md cells:', sum\\(1 for c in nb['cells'] if c['cell_type']=='markdown'\\)\\)\")",
+      "PowerShell(python -c \"import json; nb = json.load\\(open\\(r'd:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\Fake_News_Classification_Final.ipynb', encoding='utf-8'\\)\\); src = '\\\\n'.join\\(c['source'] if isinstance\\(c['source'], str\\) else ''.join\\(c['source']\\) for c in nb['cells']\\); banned = ['tensorflow', 'TFAuto', 'tf_keras', 'import keras', 'from keras']; [print\\(b, ':', b in src\\) for b in banned]\")",
+      "PowerShell(python -c \"import json; nb=json.load\\(open\\(r'd:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\FAke_News.ipynb',encoding='utf-8'\\)\\); [print\\(i, c.get\\('id','-'\\)[:20], c['cell_type']\\) for i,c in enumerate\\(nb['cells']\\)]\")",
+      "PowerShell(python -c \"import os; print\\('size:', os.path.getsize\\(r'd:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\FAke_News.ipynb'\\)\\); print\\('lines:', sum\\(1 for _ in open\\(r'd:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\FAke_News.ipynb',encoding='utf-8'\\)\\)\\)\")",
+      "PowerShell(python d:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\_convert_to_pytorch.py)",
+      "PowerShell(python -c \"import json; nb=json.load\\(open\\(r'd:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\FAke_News.ipynb',encoding='utf-8'\\)\\); src=''.join\\(c['source'] if isinstance\\(c['source'],str\\) else ''.join\\(c['source']\\) for c in nb['cells']\\); banned=['TFAutoModel','tf.keras','tensorflow as tf','from tensorflow','import tensorflow','tf_keras']; [print\\(b,':', b in src\\) for b in banned]; print\\('PyTorch references found:', src.count\\('import torch'\\), 'torch imports;', src.count\\('AutoModel'\\), 'AutoModel refs'\\)\")",
+      "PowerShell(python -c \"import json; nb=json.load\\(open\\(r'd:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\FAke_News.ipynb',encoding='utf-8'\\)\\); print\\('nbformat',nb['nbformat'],'minor',nb['nbformat_minor']\\); print\\('total cells:', len\\(nb['cells']\\)\\); print\\('OK - notebook JSON is valid'\\)\")",
+      "PowerShell(python -c \"import json; nb=json.load\\(open\\(r'd:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\Fake_News_Classification_Final.ipynb',encoding='utf-8'\\)\\); print\\('cells:', len\\(nb['cells']\\)\\); print\\('JSON OK'\\)\")",
+      "PowerShell(python -c \"import json; nb=json.load\\(open\\(r'd:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\Fake_News_Classification_Final.ipynb',encoding='utf-8'\\)\\); [print\\('---', c['id'], '---\\\\n', c['source'] if isinstance\\(c['source'],str\\) else ''.join\\(c['source']\\)\\) for c in nb['cells'] if c.get\\('id'\\) in \\('c25-split','c39-bert-cfg','c48-train','c51-test'\\)]\")",
+      "PowerShell(python -c \"import json; nb=json.load\\(open\\(r'd:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\Fake_News_Classification_Final.ipynb',encoding='utf-8'\\)\\); [print\\(c.get\\('id'\\), ':', \\(c['source'] if isinstance\\(c['source'],str\\) else ''.join\\(c['source']\\)\\)[:80].replace\\(chr\\(10\\),' '\\)\\) for c in nb['cells'] if c.get\\('id'\\) in \\('c01-abstract','c02-intro'\\)]\")",
+      "PowerShell(python -c \"import json; nb=json.load\\(open\\(r'd:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\Fake_News_Classification_Final.ipynb',encoding='utf-8'\\)\\); [print\\(i, c.get\\('id','-'\\), c['cell_type'], '|', \\(c['source'] if isinstance\\(c['source'],str\\) else ''.join\\(c['source']\\)\\)[:80].replace\\(chr\\(10\\),' '\\)\\) for i,c in enumerate\\(nb['cells'][:6]\\)]\")",
+      "PowerShell(python -c \"import json; nb=json.load\\(open\\(r'd:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\Fake_News_Classification_Final.ipynb',encoding='utf-8'\\)\\); print\\('Total cells:', len\\(nb['cells']\\)\\); [print\\(i, c.get\\('id','-'\\), c['cell_type']\\) for i,c in enumerate\\(nb['cells']\\) if i < 10]\")",
+      "PowerShell(python -c \"import json; nb=json.load\\(open\\(r'd:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\Fake_News_Classification_Final.ipynb',encoding='utf-8'\\)\\); ids=[c.get\\('id','-'\\) for c in nb['cells']]; print\\('count:', len\\(ids\\)\\); print\\('has c01:', 'c01-abstract' in ids\\); print\\('has c02:', 'c02-intro' in ids\\); abs_like=[i for i in ids if 'abstract' in i.lower\\(\\) or 'intro' in i.lower\\(\\)]; print\\('abstract/intro IDs:', abs_like\\)\")",
+      "Bash(python -c \"import json; nb=json.load\\(open\\(r'd:\\\\cloud\\\\Documents\\\\work\\\\mithona\\\\Fake_News_Classification_Final.ipynb',encoding='utf-8'\\)\\); [print\\(c['source'] if isinstance\\(c['source'],str\\) else ''.join\\(c['source']\\)\\) for c in nb['cells'] if c.get\\('id'\\)=='c05-imports']\")",
+      "Bash(python -c \"import json; nb=json.load\\(open\\('Fake_News_Classification_Final.ipynb', encoding='utf-8'\\)\\); [print\\(f'=== Cell {i} \\({c[\\\\\"cell_type\\\\\"]}\\) ===\\\\n' + ''.join\\(c['source']\\)[:500] + \\('...' if len\\(''.join\\(c['source']\\)\\)>500 else ''\\) + '\\\\n'\\) for i,c in enumerate\\(nb['cells']\\)]\")",
+      "Bash(python -c \"import json; nb=json.load\\(open\\('Fake_News_Classification_Final.ipynb', encoding='utf-8'\\)\\); print\\(''.join\\(nb['cells'][5]['source']\\)\\)\")",
+      "Bash(python -c ' *)",
+      "WebSearch",
+      "Bash(python _apply_notebook_edits.py)",
+      "Bash(python)",
+      "Bash(python -m pip install --quiet nbformat)",
+      "Bash(git ls-tree *)",
+      "Bash(sort -k4 -n -r)"
+    ]
+  }
+}

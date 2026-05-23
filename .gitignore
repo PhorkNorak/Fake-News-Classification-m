@@ -1,0 +1,30 @@
+# Data — too big for GitHub, handle out-of-band
+WELFake_Dataset.csv
+cleaned_WELFake_Dataset.csv
+*.csv
+
+# Trained model artifacts — push to HF Hub or transfer with rsync
+models/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.venv-wsl/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Notebook editor helper + backups (not part of the project)
+_apply_notebook_edits.py
+Fake_News_Classification_Final.before_edits.ipynb
+Fake_News_Classification_Final.executed.ipynb
+Fake_News_Classification_Final copy.ipynb

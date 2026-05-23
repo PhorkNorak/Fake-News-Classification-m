@@ -1,0 +1,31 @@
+# Install torch SEPARATELY first with the CUDA wheel index, e.g.:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+# (replace cu124 with whatever your `nvidia-smi` reports as the supported CUDA version)
+
+# Core notebook + execution
+jupyter
+papermill
+nbformat
+ipykernel
+
+# Numerics / plotting
+numpy
+pandas
+matplotlib
+seaborn
+
+# Classical ML
+scikit-learn
+xgboost
+lightgbm
+nltk
+
+# Transformers
+transformers
+
+# Persistence (HF-compatible)
+skops
+safetensors
+
+# Hub upload (optional, for §10 push-to-Hub)
+huggingface_hub
